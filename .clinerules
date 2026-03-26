@@ -9,3 +9,4 @@
 ## Documentation Standards
 
 1. **GitHub Markdown Math**: When writing mathematical formulas in `README.md` or other markdown files, block equations MUST be placed on new lines, sandwiched strictly between a dedicated opening `$$` line and a concluding `$$` line. This is essential for equations to correctly render in GitHub's native preview. For inline math, use single `$math$` without surrounding spaces.
+2. **Math Variable Escaping**: To prevent GitHub rendering issues, variables with underscores in math equations (e.g., `learning_rate`) must be wrapped within a text block with double-escaped underscores, like `\text{learning\\_rate}`.

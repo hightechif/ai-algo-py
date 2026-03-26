@@ -14,8 +14,8 @@ $$
 *   $w$ represents the weights (the slope)
 *   $b$ represents the bias (the intercept)
 
-2. **The Loss Function (Mean Squared Error - MSE):**
-To measure how "wrong" our line is, we calculate the average squared difference between our predictions and the actual truth.
+2. **The Cost Function (Mean Squared Error - MSE):**
+To measure how "wrong" our line is across the entire dataset, we calculate the average of the squared individual losses between our predictions and the actual truth to form the total cost.
 
 $$ 
 MSE = \frac{1}{N} \sum_{i=1}^{N}(y_i - \hat{y}_i)^2 

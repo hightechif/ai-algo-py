@@ -19,9 +19,12 @@ class LinearRegressionFromScratch:
             # Calculate predictions: y_hat = wX + b
             y_pred = np.dot(X, self.w) + self.b
             
-            # Gradients
-            # dw = (1/N) * sum(-2x * (y - y_hat))
-            # db = (1/N) * sum(-2 * (y - y_hat))
+            # Deriving the Cost Function (Mean Squared Error)
+            # Note: A Loss function is for one sample, a Cost function is the average 
+            # over the whole dataset. We skip calculating the raw Cost value and jump 
+            # straight to computing its partial derivatives (gradients).
+            # dw = d(Cost)/dw = (1/N) * X.T * (y_pred - y)
+            # db = d(Cost)/db = (1/N) * sum(y_pred - y)
             dw = (1 / n_samples) * np.dot(X.T, (y_pred - y))
             db = (1 / n_samples) * np.sum(y_pred - y)
             

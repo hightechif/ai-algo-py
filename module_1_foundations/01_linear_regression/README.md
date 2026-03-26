@@ -29,6 +29,6 @@ $$
 dw = \frac{1}{N} \sum (x \times (\hat{y} - y)) 
 $$
 
-$$ 
-w = w - (learning\_rate \times dw) 
+$$
+w = w - (\texttt{learning\_rate} \times dw) 
 $$

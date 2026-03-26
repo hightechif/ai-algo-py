@@ -1,0 +1,5 @@
+# Global Agent Rules (ai-algo-py)
+
+## Python Coding Standards
+1. **Strict Static Typing**: Every Python file created, modified, or proposed MUST use complete and strict static type hinting (e.g., importing `Tuple`, `Optional` from `typing`, and using `np.ndarray` for data shapes) to ensure full compliance with `mypy`. Do not use dynamic or inferred types for function arguments or return values.
+2. **Curriculum Alignment**: All algorithms must contain mathematical documentation and clearly separate pure logical implementations (`scratch.py`) from library wrappers (`framework.py`).

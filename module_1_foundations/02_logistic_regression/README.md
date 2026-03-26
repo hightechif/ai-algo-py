@@ -10,8 +10,8 @@ $$
 *   $w$ represents the weights
 *   $b$ represents the bias
 
-## The Loss Function (Cross-Entropy / Log Loss)
-To measure error in classification, we penalize confident but wrong probabilities using Log Loss:
+## The Cost Function (Cross-Entropy / Log Loss)
+To measure error in classification across our entire dataset, we compute the average of individual Cross-Entropy losses (penalizing confident but wrong probabilities):
 
 $$
 J(w,b) = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right]

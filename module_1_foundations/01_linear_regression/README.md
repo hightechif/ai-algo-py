@@ -25,10 +25,10 @@ $$
 3. **Optimization (Gradient Descent):**
 We take the partial derivative of the MSE function with respect to $w$ and $b$ to find the "slope of the error". Then we step downwards by a small `learning_rate` to minimize the error.
 
-$$ 
+$$
 dw = \frac{1}{N} \sum (x \times (\hat{y} - y)) 
 $$
 
-$$ 
-w = w - (\mathtt{learning\_rate} \times dw)
+$$
+w = w - (\text{learning\\_rate} \times dw)
 $$

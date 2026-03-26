@@ -30,5 +30,5 @@ dw = \frac{1}{N} \sum (x \times (\hat{y} - y))
 $$
 
 $$ 
-w = w - (learning_rate \times dw) 
+w = w - (learning\{_}rate \times dw) 
 $$

@@ -4,7 +4,7 @@
 
 1. **Strict Static Typing**: Every Python file created, modified, or proposed MUST use complete and strict static type hinting (e.g., importing `Tuple`, `Optional` from `typing`, and using `np.ndarray` for data shapes) to ensure full compliance with `mypy`. Do not use dynamic or inferred types for function arguments or return values.
 2. **Curriculum Alignment**: All algorithms must contain mathematical documentation and clearly separate pure logical implementations (`scratch.py`) from library wrappers (`framework.py`).
-3. **Real-World Data Priority**: Always prioritize real-world datasets (e.g., `load_breast_cancer`, `fetch_california_housing`, etc.) in `tutorial.ipynb`. Do NOT ask the user or choose synthetic data generators (like `make_classification`) unless specifically requested.
+3. **Real-World Data Priority**: Always prioritize real-world datasets (e.g., `load_breast_cancer`, `fetch_california_housing`, etc.) in `tutorial.py`. Do NOT ask the user or choose synthetic data generators (like `make_classification`) unless specifically requested.
 
 ## Documentation Standards
 
@@ -25,6 +25,13 @@
 1. **NumPy Vectorization**: Always prioritize NumPy vectorization over explicit Python loops (`for`, `while`) for mathematical operations on datasets. This ensures performance and idiomatic Python data science code.
 2. **Premium Variable Naming**: Use descriptive variable names that map directly to the mathematical symbols in the `README.md` (e.g., `weights` for $w$, `bias` for $b$, `learning_rate` for $\alpha$).
 3. **Docstring Math**: Include the core mathematical formula in the main class docstring using the same LaTeX format as the README.
+4. **Naming Consistency**: Follow a strict class naming convention to ensure a professional, cohesive curriculum:
+    - **`scratch.py`**: The primary algorithm class must be named `[AlgorithmName]FromScratch` (e.g., `LinearRegressionFromScratch`, `SVMFromScratch`).
+    - **`framework.py`**: The scikit-learn wrapper class must be named `[AlgorithmName]Framework` (e.g., `LinearRegressionFramework`, `SVMFramework`). This file should use a class structure instead of standalone functions to maintain consistency with the rest of the project.
+5. **Tutorial Script**: Each module must include a `tutorial.py` file that demonstrates the algorithm. This script should:
+    - Compare `SomethingFromScratch` and `SomethingFramework`.
+    - Include clear, commented sections for Data Loading, Training, and Visualization.
+    - Use `matplotlib` for premium visualizations as per the Visualization Standards.
 
 ## Visualization Standards
 

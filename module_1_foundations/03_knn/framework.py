@@ -1,24 +1,27 @@
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
-from sklearn.metrics import accuracy_score, mean_squared_error
-from typing import Tuple, Any
+from typing import Optional, Union
 
-def fit_and_predict(X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, y_test: np.ndarray, task: str = 'classification', k: int = 3) -> Tuple[Any, np.ndarray, float]:
+class KNearestNeighborsFramework:
     """
-    Trains a sklearn KNN model and returns predictions and the evaluation metric.
-    Classification returns Accuracy. Regression returns MSE.
+    Wrapper for Scikit-Learn's KNN implementation to match our curriculum API.
     """
-    if task == 'classification':
-        model = KNeighborsClassifier(n_neighbors=k)
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-        score = float(accuracy_score(y_test, y_pred))
-    elif task == 'regression':
-        model = KNeighborsRegressor(n_neighbors=k)
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-        score = float(mean_squared_error(y_test, y_pred))
-    else:
-        raise ValueError("Unsupported task. Use 'classification' or 'regression'.")
+    def __init__(self, k: int = 3, task: str = 'classification', metric: str = 'minkowski') -> None:
+        self.k = k
+        self.task = task
+        self.metric = metric
+        if task == 'classification':
+            self.model: Union[KNeighborsClassifier, KNeighborsRegressor] = KNeighborsClassifier(n_neighbors=k, metric=metric)
+        elif task == 'regression':
+            self.model = KNeighborsRegressor(n_neighbors=k, metric=metric)
+        else:
+            raise ValueError("Task must be 'classification' or 'regression'.")
 
-    return model, y_pred, score
+    def fit(self, X: np.ndarray, y: np.ndarray) -> None:
+        self.model.fit(X, y)
+
+    def predict(self, X: np.ndarray) -> np.ndarray:
+        return self.model.predict(X)
+
+    def score(self, X: np.ndarray, y: np.ndarray) -> float:
+        return float(self.model.score(X, y))

@@ -3,6 +3,12 @@ from collections import Counter
 from typing import Optional
 
 class KNearestNeighborsFromScratch:
+    """
+    K-Nearest Neighbors implemented from scratch using NumPy.
+    
+    Euclidean Distance:
+    $$ d(p, q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2} $$
+    """
     def __init__(self, k: int = 3, task: str = 'classification', metric: str = 'euclidean') -> None:
         self.k: int = k
         self.task: str = task

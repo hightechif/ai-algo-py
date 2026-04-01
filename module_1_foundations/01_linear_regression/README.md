@@ -34,3 +34,8 @@ Linear regression is the foundational technique of supervised machine learning. 
     $$
     w = w - (a \times dw)
     $$
+
+## Framework Implementations
+The `framework.py` file provides two differentiable implementations:
+- **TinyGrad**: A minimal autograd engine that makes the optimization loop explicit.
+- **PyTorch**: The industry-standard deep learning library.

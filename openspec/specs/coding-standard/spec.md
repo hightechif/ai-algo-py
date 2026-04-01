@@ -17,7 +17,9 @@ Every Python file MUST use complete and strict static type hinting to ensure ful
 - **Core Libraries**:
   - `numpy`: For mathematical operations and vectorization.
   - `matplotlib`: For visualization.
-  - `scikit-learn`: For framework-based comparisons and dataset loading.
+  - `tinygrad`: Primary educational autograd engine.
+  - `torch` (PyTorch): Industry-standard differentiable benchmark.
+  - `scikit-learn`: For dataset loading and discrete algorithm fallbacks.
 
 ## 2. Implementation Standards
 
@@ -35,7 +37,9 @@ Each algorithm module must follow this structure:
 To maintain architectural cohesion, a strict naming convention is enforced:
 
 - **Scratch Implementation**: `[AlgorithmName]FromScratch` (e.g., `LinearRegressionFromScratch`).
-- **Framework Wrapper**: `[AlgorithmName]Framework` (e.g., `LinearRegressionFramework`). This MUST be a class structure, not standalone functions.
+- **Framework Wrapper**: `[AlgorithmName]Framework` (e.g., `LinearRegressionFramework`).
+  - **Differentiable Algorithms**: MUST implement both `fit_tinygrad` and `fit_pytorch`. Must explicitly define the optimization loop (Loss -> Backward -> Step).
+  - **Discrete Algorithms**: Use `scikit-learn` as a fallback.
 
 ### 2.3 Tutorial Scripts
 

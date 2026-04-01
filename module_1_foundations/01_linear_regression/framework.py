@@ -1,17 +1,20 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from typing import Tuple
+from typing import Optional
 
-def fit_and_predict(X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray) -> Tuple[LinearRegression, np.ndarray]:
+class LinearRegressionFramework:
     """
-    Trains a sklearn Linear Regression model and returns the predictions.
-    
-    Returns:
-        model: The trained scikit-learn model
-        y_pred: Predictions on the X_test dataset
+    Wrapper for Scikit-Learn's Linear Regression to match our curriculum API.
     """
-    model = LinearRegression()
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    
-    return model, y_pred
+    def __init__(self) -> None:
+        self.model = LinearRegression()
+
+    def fit(self, X: np.ndarray, y: np.ndarray) -> None:
+        self.model.fit(X, y)
+
+    def predict(self, X: np.ndarray) -> np.ndarray:
+        return self.model.predict(X)
+
+    def score(self, X: np.ndarray, y: np.ndarray) -> float:
+        # Returns R^2 score for regression
+        return float(self.model.score(X, y))

@@ -2,6 +2,12 @@ import numpy as np
 from typing import Optional
 
 class LinearRegressionFromScratch:
+    """
+    Linear Regression implemented from scratch using NumPy.
+    
+    Hypothesis:
+    $$ \hat{y} = wX + b $$
+    """
     def __init__(self, learning_rate: float = 0.001, n_iters: int = 1000) -> None:
         self.lr: float = learning_rate
         self.n_iters: int = n_iters

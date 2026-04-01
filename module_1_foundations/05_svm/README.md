@@ -37,3 +37,8 @@ Support Vector Machines (SVM) is a powerful supervised learning model used for c
 - **Polynomial Kernel**: Demonstrates how SVMs can handle non-linearly separable data by mapping to higher dimensions.
 - **Support Vector Highlighting**: The provided `tutorial.ipynb` identifies and highlights **Support Vectors** (where $\alpha_i > 0$), making the mathematical theory visually explicit.
 - **Soft Margin Balance**: Leverages the $C$ parameter to handle noisy data and allow for overlapping class boundaries.
+
+## Framework Implementations
+The `framework.py` file provides two differentiable implementations:
+- **TinyGrad**: A minimal autograd engine that makes the Hinge Loss and margin regularization explicit.
+- **PyTorch**: The industry-standard deep learning library.

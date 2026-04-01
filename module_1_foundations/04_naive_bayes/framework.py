@@ -4,6 +4,9 @@ import numpy as np
 class NaiveBayesFramework:
     """
     Wrapper for Scikit-Learn's Multinomial Naive Bayes.
+    
+    Bayes' Theorem:
+    $$ P(y|X) = \frac{P(X|y)P(y)}{P(X)} $$
     """
     def __init__(self, alpha: float = 1.0):
         self.model = MultinomialNB(alpha=alpha)

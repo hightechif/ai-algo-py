@@ -1,20 +1,19 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from typing import Tuple
+from typing import Optional
 
-def fit_and_predict(X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, y_test: np.ndarray) -> Tuple[LogisticRegression, np.ndarray, float]:
+class LogisticRegressionFramework:
     """
-    Trains a sklearn Logistic Regression model and returns predictions and accuracy score.
-    
-    Returns:
-        model: The trained scikit-learn model
-        y_pred: Predictions on the X_test dataset
-        accuracy: The percentage accuracy of classifications
+    Wrapper for Scikit-Learn's Logistic Regression to match our curriculum API.
     """
-    model = LogisticRegression(max_iter=10000)
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    accuracy = float(accuracy_score(y_test, y_pred))
-    
-    return model, y_pred, accuracy
+    def __init__(self, max_iter: int = 1000) -> None:
+        self.model = LogisticRegression(max_iter=max_iter)
+
+    def fit(self, X: np.ndarray, y: np.ndarray) -> None:
+        self.model.fit(X, y)
+
+    def predict(self, X: np.ndarray) -> np.ndarray:
+        return self.model.predict(X)
+
+    def score(self, X: np.ndarray, y: np.ndarray) -> float:
+        return float(self.model.score(X, y))

@@ -5,6 +5,14 @@ def sigmoid(z: np.ndarray) -> np.ndarray:
     return 1 / (1 + np.exp(-z))
 
 class LogisticRegressionFromScratch:
+    """
+    Logistic Regression implemented from scratch using NumPy.
+    
+    Hypothesis:
+    $$ \hat{y} = \sigma(wX + b) $$
+    where
+    $$ \sigma(z) = \frac{1}{1 + e^{-z}} $$
+    """
     def __init__(self, learning_rate: float = 0.001, n_iters: int = 1000) -> None:
         self.lr: float = learning_rate
         self.n_iters: int = n_iters

@@ -34,3 +34,8 @@ Logistic regression is the foundational technique for binary classification in s
     $$
     w = w - (a \times dw)
     $$
+
+## Framework Implementations
+The `framework.py` file provides two differentiable implementations:
+- **TinyGrad**: A minimal autograd engine that makes the optimization loop and Sigmoid activation explicit.
+- **PyTorch**: The industry-standard deep learning library.

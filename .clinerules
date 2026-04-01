@@ -10,3 +10,23 @@
 
 1. **GitHub Markdown Math**: When writing mathematical formulas in `README.md` or other markdown files, block equations MUST be placed on new lines, sandwiched strictly between a dedicated opening `$$` line and a concluding `$$` line. This is essential for equations to correctly render in GitHub's native preview. For inline math, use single `$math$` without surrounding spaces.
 2. **Math Variable Escaping**: To prevent GitHub rendering issues, variables with underscores in math equations (e.g., `learning_rate`) must be wrapped within a text block with double-escaped underscores, like `\text{learning\\_rate}`.
+3. **Algorithm README Structure**: Every algorithm module's `README.md` MUST follow this minimum structure for consistency:
+    - **Title**: `# XX - Algorithm Name` (e.g., `# 01 - Linear Regression`)
+    - **Description**: A brief paragraph (2-3 lines) explaining the algorithm's purpose and intuition immediately after the title.
+    - **Mathematical Core**: A `## Mathematical Core` section containing a numbered list with at least these three bolded headers:
+        1. **The Hypothesis:** (e.g., predicted value equation)
+        2. **The Cost Function ([Name]):** (e.g., MSE, Log Loss)
+        3. **Optimization ([Method]):** (e.g., Gradient Descent)
+    - **LaTeX Formulas**: Each numbered item MUST include the corresponding formula formatted according to rule #1 above.
+    - Additional sections (e.g., "Derivation", "Practical Tips") may be added after this core structure.
+
+## Implementation Standards
+
+1. **NumPy Vectorization**: Always prioritize NumPy vectorization over explicit Python loops (`for`, `while`) for mathematical operations on datasets. This ensures performance and idiomatic Python data science code.
+2. **Premium Variable Naming**: Use descriptive variable names that map directly to the mathematical symbols in the `README.md` (e.g., `weights` for $w$, `bias` for $b$, `learning_rate` for $\alpha$).
+3. **Docstring Math**: Include the core mathematical formula in the main class docstring using the same LaTeX format as the README.
+
+## Visualization Standards
+
+1. **Mermaid Diagrams**: For algorithms involving complex flow sequences (e.g., Decision Tree splits, Backpropagation, Neural Network layers), use Mermaid diagrams to visualize the logic.
+2. **Visual Consistency**: Ensure that any generated images or diagrams use a consistent, premium color palette (e.g., slate greys, deep blues, and subtle neon highlights for accents).

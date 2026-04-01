@@ -5,6 +5,9 @@ from typing import Optional, Union
 class KNearestNeighborsFramework:
     """
     Wrapper for Scikit-Learn's KNN implementation to match our curriculum API.
+    
+    Euclidean Distance:
+    $$ d(x, q) = \sqrt{\sum_{i=1}^{n} (x_i - q_i)^2} $$
     """
     def __init__(self, k: int = 3, task: str = 'classification', metric: str = 'minkowski') -> None:
         self.k = k

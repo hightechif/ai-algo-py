@@ -1,10 +1,16 @@
 import numpy as np
 from typing import Optional
 
-class MultinomialNaiveBayes:
+class NaiveBayesFromScratch:
     """
     Multinomial Naive Bayes implementation from scratch using NumPy.
     Utilizes Laplace smoothing and log-probabilities for numeric stability.
+    
+    Likelihood with Laplace Smoothing:
+    $$ P(x_i | y) = \frac{N_{yi} + \alpha}{N_y + \alpha \cdot n_{features}} $$
+    
+    Log Posterior:
+    $$ \log P(y|x) \propto \log P(y) + \sum_{i=1}^{n} x_i \log P(x_i | y) $$
     """
     def __init__(self, alpha: float = 1.0):
         self.alpha = alpha

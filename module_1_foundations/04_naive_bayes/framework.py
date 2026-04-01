@@ -1,7 +1,7 @@
 from sklearn.naive_bayes import MultinomialNB
 import numpy as np
 
-class ScikitLearnMultinomialNB:
+class NaiveBayesFramework:
     """
     Wrapper for Scikit-Learn's Multinomial Naive Bayes.
     """

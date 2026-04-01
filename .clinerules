@@ -27,7 +27,10 @@
 3. **Docstring Math**: Include the core mathematical formula in the main class docstring using the same LaTeX format as the README.
 4. **Naming Consistency**: Follow a strict class naming convention to ensure a professional, cohesive curriculum:
     - **`scratch.py`**: The primary algorithm class must be named `[AlgorithmName]FromScratch` (e.g., `LinearRegressionFromScratch`, `SVMFromScratch`).
-    - **`framework.py`**: The scikit-learn wrapper class must be named `[AlgorithmName]Framework` (e.g., `LinearRegressionFramework`, `SVMFramework`). This file should use a class structure instead of standalone functions to maintain consistency with the rest of the project.
+    - **`framework.py`**: Implementation logic follows this priority:
+        1. **Differentiable Algorithms**: Priority is **TinyGrad** (educational) and **PyTorch** (industry benchmark). The class MUST implement optimization loops using these autograd engines to bridge the gap from scratch to framework.
+        2. **Discrete Algorithms**: Use **Scikit-Learn** ONLY for non-differentiable logic (e.g., Trees, Naive Bayes).
+        3. All implementations must use a class structure named `[AlgorithmName]Framework`.
 5. **Tutorial Script**: Each module must include a `tutorial.py` file that demonstrates the algorithm. This script should:
     - Compare `SomethingFromScratch` and `SomethingFramework`.
     - Include clear, commented sections for Data Loading, Training, and Visualization.

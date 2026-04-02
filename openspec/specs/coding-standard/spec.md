@@ -110,7 +110,7 @@ Every module README must include:
 
 1. **Title**: `# XX - Algorithm Name`.
 2. **Description**: Brief intuition paragraph.
-3. **Mathematical Core**: A numbered list with:
+3. **Mathematical Core**: Consist of:
     - **The Hypothesis**: Equation for predictions.
     - **The Cost Function**: Optimization objective.
     - **Optimization Method**: Gradient Descent or specific solver.

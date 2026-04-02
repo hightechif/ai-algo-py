@@ -1,0 +1,22 @@
+# Global Agent Rules (ai-algo-py)
+
+## 1. Source of Truth (OpenSpec)
+
+You MUST strictly follow the formal specifications defined in the OpenSpec directory. These files contain the absolute requirements for coding style, file structure, and algorithm features.
+
+- **Coding Standards**: Refer to `openspec/specs/coding-standard/spec.md` for static typing, naming conventions, and markdown math formatting.
+- **Curriculum Requirements**: Refer to `openspec/specs/algorithm-curriculum/spec.md` for the 32-algorithm roadmap and specific functional requirements (datasets, loss functions, etc.).
+
+## 2. Core Execution Principles
+
+- **Strict Static Typing**: Every Python file MUST use complete static type hinting for `mypy` compliance.
+- **Real-World Data Priority**: Always prioritize real-world datasets in `tutorial.py`. Never use synthetic generators unless explicitly requested.
+- **NumPy Vectorization**: Prioritize NumPy vectorization over explicit loops for mathematical operations.
+- **Premium Aesthetics**: All visualizations and documentation must follow the "Premium Design" guidelines in the coding standard spec.
+
+## 3. Implementation Workflow
+
+Before proposing or implementing a new algorithm, you MUST:
+1. Check the **Curriculum Roadmap** in the OpenSpec to identify the next algorithm.
+2. Read the **Functional Requirements** for that specific algorithm from the spec.
+3. Ensure the proposed design follows the **Coding Standard** file structure (`scratch.py`, `framework.py`, `tutorial.py`).

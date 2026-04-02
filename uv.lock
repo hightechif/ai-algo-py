@@ -27,6 +27,8 @@ dependencies = [
     { name = "pandas", version = "3.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "scikit-learn", version = "1.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "scikit-learn", version = "1.8.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "tinygrad", version = "0.11.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "tinygrad", version = "0.12.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "torch" },
 ]
 
@@ -37,6 +39,7 @@ requires-dist = [
     { name = "numpy" },
     { name = "pandas" },
     { name = "scikit-learn" },
+    { name = "tinygrad", extras = ["metal"], specifier = ">=0.11.0" },
     { name = "torch" },
 ]
 
@@ -3156,6 +3159,38 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/7a/fd/7a5ee21fd08ff70d3d33a5781c255cbe779659bd03278feb98b19ee550f4/tinycss2-1.4.0.tar.gz", hash = "sha256:10c0972f6fc0fbee87c3edb76549357415e94548c1ae10ebccdea16fb404a9b7", size = 87085, upload-time = "2024-10-24T14:58:29.895Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e6/34/ebdc18bae6aa14fbee1a08b63c015c72b64868ff7dae68808ab500c492e2/tinycss2-1.4.0-py3-none-any.whl", hash = "sha256:3a49cf47b7675da0b15d0c6e1df8df4ebd96e9394bb905a5775adb0d884c5289", size = 26610, upload-time = "2024-10-24T14:58:28.029Z" },
+]
+
+[[package]]
+name = "tinygrad"
+version = "0.11.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.11'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/74/e3bca9f8e361296c19bd2b038d0be8013a76b68a83757864b6751f0d592b/tinygrad-0.11.0.tar.gz", hash = "sha256:d9d468a55906cc49a1b4df5b69be78a58ab4d15714b7f238f2b0876d2bc09bc1", size = 1849541, upload-time = "2025-08-19T21:11:46.557Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/40/ac/38878fef46f9ce2cc4d624ac061f5bb5bb8ef98594fff96730d9947c3af0/tinygrad-0.11.0-py3-none-any.whl", hash = "sha256:b901d98880f04ad9f796734a013151ba851dbb9a340f1a516099adcd6fd3b3e3", size = 1745076, upload-time = "2025-08-19T21:11:44.723Z" },
+]
+
+[[package]]
+name = "tinygrad"
+version = "0.12.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform == 'win32'",
+    "python_full_version == '3.11.*' and sys_platform == 'win32'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform == 'emscripten'",
+    "python_full_version == '3.11.*' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.11.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b2/8c/83bc0895d78d335bd3f5ceadb8a6750c1834f058a0f7e5ee763dc0d626bf/tinygrad-0.12.0.tar.gz", hash = "sha256:299cd53d9452b8689b36c7026c866b73d1e4a862ec53a8ea5bc2a412358c1bbf", size = 1761546, upload-time = "2026-01-12T17:05:09.611Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1a/1e/034a535398b1fca9e9a0ece0bc870c122c79c80866eca3ed802bfea7b0df/tinygrad-0.12.0-py3-none-any.whl", hash = "sha256:275c01961e0959579ba99c6ce1ed70a2c2f1a408ed8cfb5c4de8ad1355e66611", size = 1673238, upload-time = "2026-01-12T17:05:06.727Z" },
 ]
 
 [[package]]

@@ -6,29 +6,29 @@ Despite this oversimplified assumption, Naive Bayes classifiers perform extremel
 
 ## Mathematical Core
 
-1. **The Hypothesis (Posterior Probability):**
+### 1. The Hypothesis (Posterior Probability)
 
-    Predicts the class $y$ that maximizes the posterior probability $P(y|X)$ using Bayes' Theorem and the independence assumption.
+Predicts the class $y$ that maximizes the posterior probability $P(y|X)$ using Bayes' Theorem and the independence assumption.
 
-    $$
-    \hat{y} = \arg\max_{y} P(y) \prod_{i=1}^{n} P(x_i \mid y)
-    $$
+$$
+\hat{y} = \arg\max_{y} P(y) \prod_{i=1}^{n} P(x_i \mid y)
+$$
 
-2. **The Cost Function (Likelihood):**
+### 2. The Cost Function (Likelihood)
 
-    Instead of an iterative cost function, the model aims to maximize the Joint Probability of features and classes (MLE). For numerical stability, we maximize the **Log-Likelihood**:
+Instead of an iterative cost function, the model aims to maximize the Joint Probability of features and classes (MLE). For numerical stability, we maximize the **Log-Likelihood**:
 
-    $$
-    \log P(y \mid X) \propto \log P(y) + \sum_{i=1}^{n} \log P(x_i \mid y)
-    $$
+$$
+\log P(y \mid X) \propto \log P(y) + \sum_{i=1}^{n} \log P(x_i \mid y)
+$$
 
-3. **Optimization (Maximum Likelihood Estimation):**
+### 3. Optimization (Maximum Likelihood Estimation)
 
-    Parameters (priors and likelihoods) are estimated directly from feature frequencies in the training set, using Laplace Smoothing ($\alpha$) to handle zero-count features:
+Parameters (priors and likelihoods) are estimated directly from feature frequencies in the training set, using Laplace Smoothing ($\alpha$) to handle zero-count features:
 
-    $$
-    P(x_i \mid y) = \frac{N_{yi} + \alpha}{N_y + \alpha n}
-    $$
+$$
+P(x_i \mid y) = \frac{N_{yi} + \alpha}{N_y + \alpha n}
+$$
 
 ## Bayes' Theorem
 

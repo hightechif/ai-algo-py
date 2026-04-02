@@ -71,19 +71,21 @@ This section defines the specific functional requirements for completed algorith
 ### 3.1 Module 1: Foundational Algorithms
 
 #### 3.1.1 Algorithm 01: Linear Regression
+
 - **Requirement**: SHALL provide a from-scratch implementation using NumPy vectorization for gradient descent.
-- **Requirement**: SHALL minimize the Mean Squared Error (MSE) objective function.
+- **Requirement**: SHALL minimize the Mean Squared Error (MSE) cost function.
 - **Requirement**: SHALL compare performance against an industry-standard framework.
 
 #### Scenario: Real-world Dataset
+
 - **WHEN** evaluating the model during a tutorial.
 - **THEN** it MUST use the `California Housing` dataset.
 - **AND** it MUST compare From-Scratch vs Framework results.
 
-#### Algorithm 3.1.2 Algorithm 02: Logistic Regression
+#### 3.1.2 Algorithm 02: Logistic Regression
 
 - **Requirement**: SHALL implement the Sigmoid activation function for binary classification.
-- **Requirement**: SHALL utilize the Binary Cross-Entropy (BCE) loss function.
+- **Requirement**: SHALL utilize the Binary Cross-Entropy (BCE) cost function.
 - **Requirement**: Implementation SHALL use a gradient-based optimization approach.
 
 #### Scenario: Feature Mapping
@@ -91,7 +93,7 @@ This section defines the specific functional requirements for completed algorith
 - **WHEN** training for binary classification.
 - **THEN** it MUST utilize the `Breast Cancer` dataset.
 
-#### Algorithm 3.1.3 Algorithm 03: K-Nearest Neighbors (KNN)
+#### 3.1.3 Algorithm 03: K-Nearest Neighbors (KNN)
 
 - **Requirement**: SHALL support both Classification and Regression tasks.
 - **Requirement**: SHALL allow selection between `Euclidean` and `Manhattan` distance metrics.
@@ -101,7 +103,7 @@ This section defines the specific functional requirements for completed algorith
 - **WHEN** testing classification accuracy.
 - **THEN** it MUST use the `Iris` dataset for 3-class prediction.
 
-#### Algorithm 3.1.4 Algorithm 04: Naive Bayes
+#### 3.1.4 Algorithm 04: Naive Bayes
 
 - **Requirement**: SHALL implement the `Multinomial` variant for discrete/text features.
 - **Requirement**: SHALL utilize `Laplace Smoothing` to handle zero probabilities.
@@ -112,7 +114,7 @@ This section defines the specific functional requirements for completed algorith
 - **WHEN** demonstrating text analysis.
 - **THEN** it MUST use the `SMS Spam Collection` dataset for binary labeling.
 
-#### Algorithm 3.1.5 Algorithm 05: Support Vector Machine (SVM)
+#### 3.1.5 Algorithm 05: Support Vector Machine (SVM)
 
 - **Requirement**: SHALL solve the dual problem using the `Sequential Minimal Optimization (SMO)` algorithm.
 - **Requirement**: SHALL support non-linear separation via the `Polynomial Kernel`.

@@ -33,12 +33,12 @@ Support Vector Machines (SVM) is a powerful supervised learning model used for c
 
 ## Key Features of This Implementation
 
-- **Sequential Minimal Optimization (SMO)**: A robust, simplified implementation of Platt's SMO for efficient "from-scratch" training.
-- **Polynomial Kernel**: Demonstrates how SVMs can handle non-linearly separable data by mapping to higher dimensions.
-- **Support Vector Highlighting**: The provided `tutorial.ipynb` identifies and highlights **Support Vectors** (where $\alpha_i > 0$), making the mathematical theory visually explicit.
-- **Soft Margin Balance**: Leverages the $C$ parameter to handle noisy data and allow for overlapping class boundaries.
+- **Sequential Minimal Optimization (SMO)**: A robust implementation of Platt's SMO for the "from-scratch" training of the Dual problem.
+- **Polynomial Kernel**: Native support for mapping data to higher dimensions using $K(x, x') = (x \cdot x' + c)^d$.
+- **Support Vector Highlighting**: The `tutorial.py` script visualizes and highlights **Support Vectors** ($|\beta_i| > 0$), making the mathematical theory explicit.
+- **Soft Margin Balance**: Flexible $C$ parameter implementation to handle noisy data and overlapping boundaries.
 
 ## Framework Implementations
-The `framework.py` file provides two differentiable implementations:
-- **TinyGrad**: A minimal autograd engine that makes the Hinge Loss and margin regularization explicit.
-- **PyTorch**: The industry-standard deep learning library.
+The `framework.py` file provides two high-performance differentiable implementations that solve the **Kernelized Primal SVM** using Stochastic Gradient Descent (SGD):
+- **TinyGrad**: A minimal autograd engine where the Hinge Loss and kernel-space regularization ($\frac{1}{2}\alpha^T K \alpha$) are implemented from first principles.
+- **PyTorch**: Utilizing industry-standard optimization techniques (Adam) and hardware acceleration (MPS/CUDA) to solve the non-linear objective.

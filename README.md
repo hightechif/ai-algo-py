@@ -1,26 +1,20 @@
-# AI Algorithms from Scratch (ai-algo-py)
+# AI Algorithms From Scratch (ai-algo-py)
 
-A comprehensive, progression-based curriculum and code repository for learning Artificial Intelligence and Machine Learning algorithms. This repository aims to document the journey of implementing 30+ classic and modern AI algorithms.
+A comprehensive, progression-based curriculum for mastering Artificial Intelligence and Machine Learning algorithms. This project implements 30+ algorithms from foundational mathematics to advanced deep learning.
 
-## The Goal
+## 🚀 The Mission
 
-The purpose of this project serves a dual goal:
+1. **Master the Math**: Implement every algorithm using only fundamental libraries (`NumPy`) to understand optimization, gradients, and loss functions.
+2. **Bridge the Gap**: Compare scratch implementations with industry-standard frameworks (`PyTorch`, `TinyGrad`, `Scikit-Learn`).
+3. **Curriculum Based**: Follow a structured learning path from Foundations to Reinforcement Learning.
 
-1. **Personal Learning:** A disciplined approach to understanding the underlying mathematics and mechanics of AI algorithms.
-2. **Public Documentation:** Providing clean, heavily-commented, and structural code to serve as a curriculum for others trying to master these same concepts.
+## 🏛️ Project Architecture
 
-## Approach: "From Scratch" vs "Framework"
+To maintain the highest educational standards, this project follows a formal **OpenSpec** system.
 
-To gain a deep understanding, each algorithm in this repository is implemented twice:
-
-* **From Scratch:** Using fundamental libraries (like `NumPy` in Python) to manually program matrix multiplications, gradients, backwards propagation, loss functions, and optimization loops.
-* **With Frameworks:** Utilizing industry-standard libraries like `scikit-learn`, `PyTorchT`, or `TensorFlow` to solve the exact same problem, highlighting how the "black boxes" abstract away the scratch implementations.
-
-## Getting Started
-
-The project is outlined in `CURRICULUM.md`, which defines the exact order and modules to progress through. The raw list of algorithms can be found in `algo-list.txt`.
-
-## Algorithm Curriculum Roadmap
+- **[Master Roadmap](file:///Users/ridhanfadhilah/Documents/AI/ai-algo-py/openspec/specs/algorithm-curriculum/spec.md)**: The full 32-algorithm curriculum across 6 major modules.
+- **[Algorithm Requirements](file:///Users/ridhanfadhilah/Documents/AI/ai-algo-py/openspec/specs/algorithm-curriculum/spec.md#3-module-functional-requirements)**: Functional requirements for each algorithm (Datasets, Optimization, Scenarios).
+- **[Coding Standards](file:///Users/ridhanfadhilah/Documents/AI/ai-algo-py/openspec/specs/coding-standard/spec.md)**: Strict standards for typing, file structure, and documentation.
 
 Below is the structured path detailing how all 32 AI Algorithms are mapped across the 6 major learning modules:
 
@@ -51,3 +45,25 @@ Legend: [Reg] Regression | [Cls] Classification | [Cluster] Clustering
         [RL] Reinforcement | [Deep] Deep Learning | [Opt] Optimization
 ==============================================================================
 ```
+
+## 📦 Getting Started
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/hightechif/ai-algo-py.git
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Navigating the Modules
+Each algorithm resides in its own module directory:
+`module_X/YY_name/`
+- `scratch.py`: Pure NumPy implementation.
+- `framework.py`: Multi-engine framework implementation.
+- `tutorial.py`: Comparison and visualization script.
+
+---
+
+*Follow the formal requirements in `openspec/specs/` to ensure your contributions meet the curriculum standards.*

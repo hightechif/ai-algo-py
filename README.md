@@ -12,9 +12,9 @@ A comprehensive, progression-based curriculum for mastering Artificial Intellige
 
 To maintain the highest educational standards, this project follows a formal **OpenSpec** system.
 
-- **[Master Roadmap](file:///Users/ridhanfadhilah/Documents/AI/ai-algo-py/openspec/specs/algorithm-curriculum/spec.md)**: The full 32-algorithm curriculum across 6 major modules.
-- **[Algorithm Requirements](file:///Users/ridhanfadhilah/Documents/AI/ai-algo-py/openspec/specs/algorithm-curriculum/spec.md#3-module-functional-requirements)**: Functional requirements for each algorithm (Datasets, Optimization, Scenarios).
-- **[Coding Standards](file:///Users/ridhanfadhilah/Documents/AI/ai-algo-py/openspec/specs/coding-standard/spec.md)**: Strict standards for typing, file structure, and documentation.
+- **[Master Roadmap](./openspec/specs/algorithm-curriculum/spec.md)**: The full 32-algorithm curriculum across 6 major modules.
+- **[Algorithm Requirements](./openspec/specs/algorithm-curriculum/spec.md#3-module-functional-requirements)**: Functional requirements for each algorithm (Datasets, Optimization, Scenarios).
+- **[Coding Standards](./openspec/specs/coding-standard/spec.md)**: Strict standards for typing, file structure, and documentation.
 
 Below is the structured path detailing how all 32 AI Algorithms are mapped across the 6 major learning modules:
 

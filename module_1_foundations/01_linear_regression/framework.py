@@ -49,6 +49,7 @@ class LinearRegressionFramework:
         
         optimizer = tg_optim.SGD([w, b], lr=self.lr)
 
+        Tensor.training = True
         for _ in range(self.n_iters):
             optimizer.zero_grad()
             # y = wX + b
@@ -57,6 +58,7 @@ class LinearRegressionFramework:
             loss = ((out - y_tg)**2).mean()
             loss.backward()
             optimizer.step()
+        Tensor.training = False
 
         self.w = w.numpy().flatten()
         self.b = float(b.numpy()[0])

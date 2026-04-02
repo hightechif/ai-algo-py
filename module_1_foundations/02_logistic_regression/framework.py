@@ -56,17 +56,20 @@ class LogisticRegressionFramework:
         
         optimizer = tg_optim.SGD([w, b], lr=self.lr)
 
+        Tensor.training = True
         for _ in range(self.n_iters):
             optimizer.zero_grad()
             # Logits: wX + b
             logits = X_tg.matmul(w) + b
-            # Activation: Sigmoid
-            out = logits.sigmoid()
-            # Binary Cross-Entropy Loss
-            # BCE = -[y*log(p) + (1-y)*log(1-p)]
-            loss = (-(y_tg * out.log() + (1-y_tg) * (1-out).log())).mean()
+            
+            # Numerically Stable Binary Cross-Entropy Loss
+            # Using: max(x, 0) - x * y + log(1 + exp(-abs(x)))
+            # This avoids log(0) which causes NaNs.
+            loss = (logits.relu() - logits * y_tg + (1 + (-logits.abs()).exp()).log()).mean()
+            
             loss.backward()
             optimizer.step()
+        Tensor.training = False
 
         self.w = w.numpy().flatten()
         self.b = float(b.numpy()[0])

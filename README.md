@@ -4,7 +4,7 @@ A comprehensive, progression-based curriculum for mastering Artificial Intellige
 
 ## 🚀 The Mission
 
-1. **Master the Math**: Implement every algorithm using only fundamental libraries (`NumPy`) to understand optimization, gradients, and loss functions.
+1. **Master the Math**: Implement every algorithm using only fundamental libraries (`NumPy`) to understand optimization, gradients, and cost functions.
 2. **Bridge the Gap**: Compare scratch implementations with industry-standard frameworks (`PyTorch`, `TinyGrad`, `Scikit-Learn`).
 3. **Curriculum Based**: Follow a structured learning path from Foundations to Reinforcement Learning.
 

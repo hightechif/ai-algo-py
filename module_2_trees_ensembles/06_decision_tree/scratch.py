@@ -24,11 +24,13 @@ class DecisionTree:
         self,
         max_depth: int = 10,
         min_samples_split: int = 2,
-        min_impurity_decrease: float = 0.0
+        min_impurity_decrease: float = 0.0,
+        n_features: Optional[int] = None
     ):
         self.max_depth = max_depth
         self.min_samples_split = min_samples_split
         self.min_impurity_decrease = min_impurity_decrease
+        self.n_features = n_features
         self.root: Optional[Node] = None
 
     def _gini(self, y: np.ndarray) -> float:
@@ -51,7 +53,12 @@ class DecisionTree:
 
         current_impurity = self._gini(y)
 
-        for feature_idx in range(n_features):
+        feature_indices = list(range(n_features))
+        if self.n_features is not None:
+            # We want to randomly select self.n_features indices without replacement
+            feature_indices = np.random.choice(n_features, min(self.n_features, n_features), replace=False).tolist()
+
+        for feature_idx in feature_indices:
             X_column = X[:, feature_idx]
             thresholds = np.unique(X_column)
             

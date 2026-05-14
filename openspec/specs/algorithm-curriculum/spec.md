@@ -124,3 +124,17 @@ This section defines the specific functional requirements for completed algorith
 
 - **WHEN** testing kernelized separation.
 - **THEN** it SHOULD use the `make_moons` dataset for complex boundary visualization.
+
+### 3.2 Module 2: Trees & Ensembles
+
+#### 3.2.1 Algorithm 06: Decision Tree
+
+- **Requirement**: SHALL implement the CART (Classification and Regression Trees) algorithm using recursive binary splitting.
+- **Requirement**: SHALL use Gini Impurity as the splitting criterion for classification.
+- **Requirement**: SHALL support regularization parameters including `max_depth`, `min_samples_split`, and `min_impurity_decrease`.
+
+#### Scenario: Interpretability and Visualization
+
+- **WHEN** training for classification.
+- **THEN** it MUST use the `Breast Cancer` dataset.
+- **AND** it MUST generate a visualization of the decision boundaries.

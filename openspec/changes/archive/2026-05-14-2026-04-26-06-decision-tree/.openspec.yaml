@@ -1,0 +1,15 @@
+name: 2026-04-26-06-decision-tree
+status: implemented
+created_at: 2026-04-26T19:41:49+07:00
+artifacts:
+  proposal:
+    path: proposal.md
+    status: done
+  design:
+    path: design.md
+    status: done
+  tasks:
+    path: tasks.md
+    status: done
+apply_requires:
+  - tasks

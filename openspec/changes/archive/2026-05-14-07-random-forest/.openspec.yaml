@@ -1,0 +1,16 @@
+name: 07-random-forest
+status: proposed
+created_at: 2026-05-14T18:33:00+07:00
+schema: spec-driven
+artifacts:
+  proposal:
+    path: proposal.md
+    status: done
+  design:
+    path: design.md
+    status: done
+  tasks:
+    path: tasks.md
+    status: done
+apply_requires:
+  - tasks

@@ -138,3 +138,16 @@ This section defines the specific functional requirements for completed algorith
 - **WHEN** training for classification.
 - **THEN** it MUST use the `Breast Cancer` dataset.
 - **AND** it MUST generate a visualization of the decision boundaries.
+
+#### 3.2.2 Algorithm 07: Random Forest
+
+- **Requirement**: SHALL implement an ensemble of Decision Trees using Bootstrap Aggregating (Bagging).
+- **Requirement**: SHALL introduce feature randomness by considering only a subset of features at each split.
+- **Requirement**: SHALL implement Out-Of-Bag (OOB) score estimation during training.
+
+#### Scenario: Ensemble Robustness
+
+- **WHEN** evaluating model performance.
+- **THEN** it MUST use the `Breast Cancer` dataset.
+- **AND** it MUST compare performance against a single Decision Tree to demonstrate variance reduction.
+- **AND** it MUST output the calculated OOB score.
